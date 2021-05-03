@@ -1,18 +1,15 @@
 <?php
     require('coneccion/datos_coneccion.php');
-    if(isset($_POST['ingresar'])){//Determina si una variable está definida y no es null
+    if(isset($_POST['ingresar'])){
         
         $rut=$_POST['rut'];
         $contrasena=$_POST['contraseña'];
 
-        //se hace una consulta a la bases de datos
+        $consulta="SELECT E.RUT_ENCARGADO, E.NOMBRE_ENCARGADO, E.APELLIDO_ENCARGADO, E.ROL FROM ENCARGADOS_DE_CONTRATO E, CUENTA C  
+        WHERE E.RUT_ENCARGADO = '$rut' AND C.CONTRASENA = '$contrasena' AND E.ID_CUENTA = C.ID_CUENTA";
 
-        $consulta="SELECT * FROM USUARIOS WHERE RUT = '$rut' AND CONTRASENA = '$contrasena'";
-
-            //aquí estoy ejecutando la consulta
         $resultado=mysqli_query($conexion,$consulta);
-
-            //si lo datos coinciden con la base de dato me devuelve un 1 que quiere decir que los datos estan dentro de la base de datos
+ 
         $filas=mysqli_num_rows($resultado);
 
         if($filas>0){
@@ -21,25 +18,23 @@
                 
             session_start();
 
-            $_SESSION['rut']=$datos_usuario['RUT'];
+            $_SESSION['rut']=$datos_usuario['RUT_ENCARGADO'];
 
-            $_SESSION['nombre']=$datos_usuario['NOMBRE'];
+            $_SESSION['nombre']=$datos_usuario['NOMBRE_ENCARGADO'];
 
-            $_SESSION['apellido']=$datos_usuario['APELLIDO'];
+            $_SESSION['apellido']=$datos_usuario['APELLIDO_ENCARGADO'];
 
-            $_SESSION['perfil']=$datos_usuario['PERFIL'];
+            $_SESSION['rol']=$datos_usuario['ROL'];
 
             header('location:inicio');
 
 
         }
         else{
-            
             header('location:login.php');
         }
         
     }
     
-    //cerramos la coneccion de la base de datos
     mysqli_close($conexion);     
 ?>

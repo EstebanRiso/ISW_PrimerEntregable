@@ -2,18 +2,16 @@
 
     session_start();
 
-    if($_SESSION['perfil']=='Administrador'){
+    if($_SESSION['rol']=='Directora Informatica'){
 
-        echo 'Hola Administrador';
-
-    }
-    elseif($_SESSION['perfil']=='Jefe de Servicios'){
-
-        echo 'Hola Jefe de Servicios';
+        echo 'Hola Directora Informatica';
 
     }
+    elseif($_SESSION['rol']=='Encargado Juridico'){
 
-    
+        echo 'Hola Encargado Juridico';
+
+    }
 
 
 ?>
