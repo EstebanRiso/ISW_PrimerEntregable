@@ -30,37 +30,38 @@
 
             <br></br><h2 class="d-flex justify-content-center">PERFIL TECNICO</h2><br></br><br></br>
 
-            <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
 
-                <form action="post_perfiles.php" method="POST">
+                
+                    <form action="ver_perfiles.php" method="POST">
 
-                    <label for="nombreperfil">Escoja un perfil:</label>
-                        <select id="perfil" name="perfil">
-                            <?php
+                        <label for="nombreperfil">Escoja un perfil:</label>
+                            <select id="perfil" name="perfil">
+                             <?php
 
-                                require('../coneccion/datos_coneccion.php'); 
-                                $consulta="SELECT NOMBRE_PERFIL from perfil";
-                                $resultado=mysqli_query($conexion,$consulta);
+                                    require('../coneccion/datos_coneccion.php'); 
+                                    $consulta="SELECT NOMBRE_PERFIL from perfil";
+                                    $resultado=mysqli_query($conexion,$consulta);
 
-                                while($fila=mysqli_fetch_assoc($resultado)){
-                                    $NOMBRE_PERFIL=$fila['NOMBRE_PERFIL'];
-                                    echo "<option value= '$NOMBRE_PERFIL'>$NOMBRE_PERFIL</option>";
+                                    while($fila=mysqli_fetch_assoc($resultado)){
+                                        $NOMBRE_PERFIL=$fila['NOMBRE_PERFIL'];
+                                        echo "<option value= '$NOMBRE_PERFIL'>$NOMBRE_PERFIL</option>";
                                 }
                             ?>
                         </select>
                     
-                        <button type="button" class="btn btn-danger">+</button>
-                    <input type="submit" name="verperfil" value="VER PERFIL"></input>
+                            <button type="button" class="btn btn-danger">+</button>
+                        <input type="submit" name="verperfil" value="VER PERFIL"></input>
 
-                </form>
+                    </form>
                 
+                    </div>
 
-
-            </div>
-
-            <div class="d-flex justify-content-center espacio1"> 
-                <button type="button" class="btn btn-primary btn-lg">crear ficha técnica</button>
-            </div>
+                <form action="post_perfiles.php" method="POST">
+                        <div class="d-flex justify-content-center espacio1"> 
+                            <button type="submit" name="crearperfil" class="btn btn-primary btn-lg">crear ficha técnica</button>
+                         </div>
+                </form>
             <div class="d-flex justify-content-center espacio2"> 
                 <button type="button" class="btn btn-primary btn-lg">descargar ficha técnica</button>
             </div>
