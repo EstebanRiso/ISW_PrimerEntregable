@@ -11,7 +11,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
-
+    <!-- ESTE CSS ES DE ESTEBAN -->
+    <link rel="stylesheet" href="../assets/css/Esteban.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
 

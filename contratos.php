@@ -4,8 +4,7 @@
 
     if($_SESSION['rol']=='Directora Informatica'){
 
-        echo 'Hola Directora Informatica';
-
+        header('location:./contratos/perfil_tecnico.php');
     }
     elseif($_SESSION['rol']=='Encargado Juridico'){
 
