@@ -1,7 +1,7 @@
 <?php
 
     $db_host="localhost";
-    $db_nombre="camilo";
+    $db_nombre="bdd_primerentregable-isw";
     $db_usuario="root";
     $db_contraseña="";
     $db_puerto=3306;
