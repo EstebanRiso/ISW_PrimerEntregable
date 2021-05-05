@@ -14,9 +14,7 @@
 
 
 <body>
-    <?php
-        include("./vencimiento.php");
-    ?>
+    
     <div class="d-flex" id="content-wrapper">
     <!-- sideBar -->
     <?php include('../partes/sidebar.php') ?>
@@ -28,18 +26,19 @@
         <?php include('../partes/nav.php') ?>
     <!-- Fin Navbar -->
 
-       
+    <?php include("./vencimiento.php")?>
         <!-- Page Content -->
 
                     <h1> BIENVENIDA DIRECTORA</h1>  
 
+                <div>
                     <form action="perfil_tecnico.php">
 
-                        <button type="submit" class="btn btn-primary">Crear Ficha Tecnica</button>
-                        <button type="submit" class="btn btn-primary">Confirmar Contratos</button>
-                        <button type="submit" class="btn btn-primary">Modificar Ficha Tecnica</button>
+                        <div><button type="submit" class="btn btn-primary" style="width:15%;">Crear Ficha Tecnica</button></div>
                     </form>
-
+                        <div><button type="submit" class="btn btn-primary"style="width:15%;">Confirmar Contratos</button></div>
+                        <div><button type="submit" class="btn btn-primary" style="width:15%;">Modificar Ficha Tecnica</button></div>
+                <div>
         </div>
     </div>
 
