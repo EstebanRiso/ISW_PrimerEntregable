@@ -9,11 +9,14 @@
     
     
 <!-- head -->
-    <?php include('../partes/head.php') ?>
+    <?php include('../partes/head.php'); ?>
 <!-- fin head -->
 
 
 <body>
+    <?php
+        include("./vencimiento.php");
+    ?>
     <div class="d-flex" id="content-wrapper">
     <!-- sideBar -->
     <?php include('../partes/sidebar.php') ?>
