@@ -28,7 +28,7 @@
        
         <!-- Page Content -->
 
-            <br></br><h2 class="d-flex justify-content-center">PERFIL TECNICO</h2><br></br><br></br>
+            <br></br><h2 class="d-flex justify-content-center">FICHA TÉCNICA</h2><br></br><br></br>
 
                 <div class="d-flex justify-content-center">
 
@@ -50,7 +50,9 @@
                             ?>
                         </select>
                     
-                            <button type="button" class="btn btn-danger">+</button>
+                            <button type="button" class="btn btn-success">+</button>
+                            <button type="button" class="btn btn-danger">-</button>
+
                         <input type="submit" name="verperfil" value="VER PERFIL"></input>
 
                     </form>
@@ -59,11 +61,11 @@
 
                 <form action="post_perfiles.php" method="POST">
                         <div class="d-flex justify-content-center espacio1"> 
-                            <button type="submit" name="crearperfil" class="btn btn-primary btn-lg">crear ficha técnica</button>
+                            <button type="submit" name="crearperfil" class="btn btn-primary btn-lg" style="width:20%;">crear ficha técnica</button>
                          </div>
                 </form>
             <div class="d-flex justify-content-center espacio2"> 
-                <button type="button" class="btn btn-primary btn-lg">descargar ficha técnica</button>
+                <button type="button" class="btn btn-primary btn-lg" style="width:20%;">descargar ficha técnica</button>
             </div>
 
 

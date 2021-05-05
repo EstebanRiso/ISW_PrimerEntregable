@@ -32,7 +32,9 @@
 
                     <form action="perfil_tecnico.php">
 
-                        <button type="submit" class="btn btn-primary">Crear Perfil</button>
+                        <button type="submit" class="btn btn-primary">Crear Ficha Tecnica</button>
+                        <button type="submit" class="btn btn-primary">Confirmar Contratos</button>
+                        <button type="submit" class="btn btn-primary">Modificar Ficha Tecnica</button>
                     </form>
 
         </div>
